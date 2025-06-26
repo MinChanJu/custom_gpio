@@ -8,3 +8,11 @@ sudo rmmod custom_gpio
 sudo chmod 666 /dev/custom_gpio
 
 git clone https://github.com/MinChanJu/custom_gpio.git
+
+cd custom_gpio
+
+make
+
+sudo ./app/sub
+
+sudo ./app/main
