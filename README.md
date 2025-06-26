@@ -6,3 +6,5 @@ dmesg | grep "custom_gpio"
 ls /dev/custom_gpio
 sudo rmmod custom_gpio
 sudo chmod 666 /dev/custom_gpio
+
+git clone https://github.com/MinChanJu/custom_gpio.git
