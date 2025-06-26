@@ -3,7 +3,7 @@
 #include "gpio_api.h"
 
 #define WARNING 17
-#define MESSAGE 21
+#define MESSAGE 27
 
 int main() {
   if (gpio_init() < 0) return 1;
