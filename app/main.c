@@ -34,7 +34,8 @@ int main() {
     }
 
     if (sub_state != state) {
-      printf("뭔가 이상함 Message: %d, state: %d\n", sub_state, state);
+      printf("수신 측의 값이 이상합니다. 현재: %d, 수신: %d\n", state, sub_state);
+      usleep(100*1000); // 100ms
     }
 
     if (prev_button == 1 && curr_button == 0) {
