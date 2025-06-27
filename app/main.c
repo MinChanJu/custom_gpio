@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
-#include "gpio_api.h"
+#include "../gpio_api.h"
 
 #define WARNING 17
 #define BUTTON 21
@@ -21,7 +21,7 @@ int main() {
   int state = 0;
   int prev_button = 0;
 
-  gpio_write(WARNING, state); // 초기 상태 OFF
+  gpio_write(WARNING, state);
   printf("화재 경보 시스템 시작\n");
 
   while (1) {
@@ -37,7 +37,6 @@ int main() {
       printf("뭔가 이상함 Message: %d, state: %d\n", sub_state, state);
     }
 
-    // 버튼 눌렀다가 뗀 순간
     if (prev_button == 1 && curr_button == 0) {
       state = !state;
       if (gpio_write(WARNING, state) < 0) {

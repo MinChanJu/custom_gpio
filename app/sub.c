@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
-#include "gpio_api.h"
+#include "../gpio_api.h"
 
 #define WARNING 17
 #define MESSAGE 27
@@ -19,7 +19,7 @@ int main() {
   int prev_state = 0;
   int curr_state = 0;
 
-  gpio_write(MESSAGE, 0); // 초기 알림 OFF
+  gpio_write(MESSAGE, 0);
   printf("화재 경보 시스템 시작\n");
 
   while (1) {

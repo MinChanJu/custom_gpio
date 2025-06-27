@@ -1,4 +1,3 @@
-/* system programming custom gpio driver (multi pin supported) */
 #include <linux/module.h>
 #include <linux/init.h>
 #include <linux/fs.h>
